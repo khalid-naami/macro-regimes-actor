@@ -1,0 +1,36 @@
+{
+    "title": "Cross-Asset Macro Regimes Actor Input Schema",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "period": {
+            "title": "Lookback Window",
+            "type": "string",
+            "description": "Historical timeframe for macro regimes analysis and regression fitting.",
+            "default": "2y",
+            "enum": ["1y", "2y", "3y", "5y", "10y"],
+            "editor": "select"
+        },
+        "goldSymbol": {
+            "title": "Gold Data Source",
+            "type": "string",
+            "description": "Ticker symbol for Gold prices (COMEX futures 'GC=F' or ETF 'GLD').",
+            "default": "GC=F",
+            "editor": "textfield"
+        },
+        "copperSymbol": {
+            "title": "Copper Data Source",
+            "type": "string",
+            "description": "Ticker symbol for Copper prices (COMEX futures 'HG=F' or ETF 'CPER').",
+            "default": "HG=F",
+            "editor": "textfield"
+        },
+        "includeHistoricalTimeSeries": {
+            "title": "Include Historical Time Series",
+            "type": "boolean",
+            "description": "Whether to output full historical daily time series of metrics and residuals into the dataset.",
+            "default": true
+        }
+    },
+    "required": ["period"]
+}
