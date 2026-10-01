@@ -1,0 +1,86 @@
+{
+    "actorSpecification": 1,
+    "name": "macro-regimes-dataset",
+    "title": "Cross-Asset Macro Regimes Dataset",
+    "description": "Daily cross-asset macro metrics including Copper/Gold ratio, 10Y/30Y Treasury yields, OLS implied yields, term premium residuals, and Gold rolling beta sensitivity.",
+    "views": {
+        "overview": {
+            "title": "Macro Regimes Daily Overview",
+            "description": "Primary daily macro indicators and regime signals",
+            "transformation": {
+                "fields": [
+                    "date",
+                    "copperGoldRatio",
+                    "ratioPercentile",
+                    "actual10yYieldPct",
+                    "implied10yYieldPct",
+                    "residualBp",
+                    "termPremiumStatus",
+                    "actual30yYieldPct",
+                    "goldPriceUsd",
+                    "copperPriceUsd",
+                    "goldBeta30y",
+                    "corr60d",
+                    "macroRegimeSignal"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "date": {
+                        "label": "Date",
+                        "format": "text"
+                    },
+                    "copperGoldRatio": {
+                        "label": "Cu/Au Ratio",
+                        "format": "number"
+                    },
+                    "ratioPercentile": {
+                        "label": "Ratio %ile",
+                        "format": "number"
+                    },
+                    "actual10yYieldPct": {
+                        "label": "10Y Actual (%)",
+                        "format": "number"
+                    },
+                    "implied10yYieldPct": {
+                        "label": "10Y Implied (%)",
+                        "format": "number"
+                    },
+                    "residualBp": {
+                        "label": "Residual (bp)",
+                        "format": "number"
+                    },
+                    "termPremiumStatus": {
+                        "label": "Term Premium",
+                        "format": "text"
+                    },
+                    "actual30yYieldPct": {
+                        "label": "30Y Yield (%)",
+                        "format": "number"
+                    },
+                    "goldPriceUsd": {
+                        "label": "Gold ($)",
+                        "format": "number"
+                    },
+                    "copperPriceUsd": {
+                        "label": "Copper ($)",
+                        "format": "number"
+                    },
+                    "goldBeta30y": {
+                        "label": "Gold Beta (60d)",
+                        "format": "number"
+                    },
+                    "corr60d": {
+                        "label": "Corr (60d)",
+                        "format": "number"
+                    },
+                    "macroRegimeSignal": {
+                        "label": "Regime Signal",
+                        "format": "text"
+                    }
+                }
+            }
+        }
+    }
+}
