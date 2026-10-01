@@ -1,0 +1,29 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Cross-Asset Macro Regimes Actor Output",
+    "description": "Comprehensive institutional macro regimes report, OLS regression equations, term-premium residuals, rolling beta sensitivities, and automated macro narrative.",
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string"
+        },
+        "timestamp": {
+            "type": "string"
+        },
+        "lookbackPeriod": {
+            "type": "string"
+        },
+        "currentRegimeSummary": {
+            "type": "object"
+        },
+        "regressionModels": {
+            "type": "object"
+        },
+        "automatedMacroNarrative": {
+            "type": "array"
+        },
+        "latestMetrics": {
+            "type": "object"
+        }
+    }
+}
