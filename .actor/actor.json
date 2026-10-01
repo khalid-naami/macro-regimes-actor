@@ -1,0 +1,14 @@
+{
+    "actorSpecification": 1,
+    "name": "macro-regimes-actor",
+    "title": "Cross-Asset Macro Regimes & Yield Premium Intelligence",
+    "description": "Institutional cross-asset macro regimes model: Copper/Gold growth proxy ratio, 10Y/30Y Treasury yield regimes, OLS regression implied yields, term-premium residuals (Rich vs Cheap bp), and rolling Gold beta/correlation sensitivity.",
+    "version": "1.0",
+    "meta": {
+        "templateId": "python-start"
+    },
+    "dockerfile": "../Dockerfile",
+    "input": "./input_schema.json",
+    "dataset": "./dataset_schema.json",
+    "output": "./output_schema.json"
+}
