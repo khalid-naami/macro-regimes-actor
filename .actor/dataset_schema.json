@@ -1,8 +1,78 @@
 {
     "actorSpecification": 1,
-    "name": "macro-regimes-dataset",
-    "title": "Cross-Asset Macro Regimes Dataset",
-    "description": "Daily cross-asset macro metrics including Copper/Gold ratio, 10Y/30Y Treasury yields, OLS implied yields, term premium residuals, and Gold rolling beta sensitivity.",
+    "fields": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "additionalProperties": true,
+        "required": [],
+        "properties": {
+            "date": {
+                "type": "string",
+                "title": "Date",
+                "nullable": true
+            },
+            "copperGoldRatio": {
+                "type": "number",
+                "title": "Cu/Au Ratio",
+                "nullable": true
+            },
+            "ratioPercentile": {
+                "type": "number",
+                "title": "Ratio %ile",
+                "nullable": true
+            },
+            "actual10yYieldPct": {
+                "type": "number",
+                "title": "10Y Actual (%)",
+                "nullable": true
+            },
+            "implied10yYieldPct": {
+                "type": "number",
+                "title": "10Y Implied (%)",
+                "nullable": true
+            },
+            "residualBp": {
+                "type": "number",
+                "title": "Residual (bp)",
+                "nullable": true
+            },
+            "termPremiumStatus": {
+                "type": "string",
+                "title": "Term Premium",
+                "nullable": true
+            },
+            "actual30yYieldPct": {
+                "type": "number",
+                "title": "30Y Yield (%)",
+                "nullable": true
+            },
+            "goldPriceUsd": {
+                "type": "number",
+                "title": "Gold ($)",
+                "nullable": true
+            },
+            "copperPriceUsd": {
+                "type": "number",
+                "title": "Copper ($)",
+                "nullable": true
+            },
+            "goldBeta30y": {
+                "type": "number",
+                "title": "Gold Beta (60d)",
+                "nullable": true
+            },
+            "corr60d": {
+                "type": "number",
+                "title": "Corr (60d)",
+                "nullable": true
+            },
+            "macroRegimeSignal": {
+                "type": "string",
+                "title": "Regime Signal",
+                "nullable": true
+            }
+        }
+    },
     "views": {
         "overview": {
             "title": "Macro Regimes Daily Overview",
