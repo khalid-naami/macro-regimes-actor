@@ -1,0 +1,15 @@
+{
+    "actorKeyValueStoreSchemaVersion": 1,
+    "title": "Cross-Asset Macro Regimes Key-Value Store",
+    "description": "Summary report for Cross-Asset Macro Regimes & Yield Premium Intelligence.",
+    "collections": {
+        "output": {
+            "title": "Macro Regimes Report",
+            "description": "Current regime summary, OLS regression models, automated macro narrative, and latest metrics.",
+            "key": "OUTPUT",
+            "contentTypes": [
+                "application/json"
+            ]
+        }
+    }
+}
