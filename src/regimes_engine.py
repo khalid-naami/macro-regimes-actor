@@ -24,11 +24,10 @@ class MacroRegimesEngine:
             df['ratio'] = (df['copper'] / df['gold']) * 100.0
 
             # 2. Z-Scores over the lookback window
-            df['gold_z'] = (df['gold'] - df['gold'].mean()) / (df['gold'].std() or 1.0)
-            df['copper_z'] = (df['copper'] - df['copper'].mean()) / (df['copper'].std() or 1.0)
-            df['y10_z'] = (df['y10'] - df['y10'].mean()) / (df['y10'].std() or 1.0)
-            df['y30_z'] = (df['y30'] - df['y30'].mean()) / (df['y30'].std() or 1.0)
-            df['ratio_z'] = (df['ratio'] - df['ratio'].mean()) / (df['ratio'].std() or 1.0)
+            for src_col, z_col in [('gold', 'gold_z'), ('copper', 'copper_z'), ('y10', 'y10_z'), ('y30', 'y30_z'), ('ratio', 'ratio_z')]:
+                col_std = df[src_col].std()
+                safe_std = col_std if (pd.notna(col_std) and col_std > 0) else 1.0
+                df[z_col] = (df[src_col] - df[src_col].mean()) / safe_std
 
             # 3. Daily returns and yield changes
             df['gold_ret_pct'] = df['gold'].pct_change() * 100.0
